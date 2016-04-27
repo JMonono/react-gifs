@@ -6,7 +6,8 @@ const GifModal = (props) => {
     return <div></div>;
   }
   return (
-    <Modal>
+    <Modal isOpen={ props.modalIsOpen }
+      onRequestClose={ props.onRequestClose }>
       <div className="gif-modal">
         <img src={props.selectedGif.images.original.url } />
           <p><strong>Source:</strong> <a href={ props.selectedGif.source }>{ props.selectedGif.source }</a></p>
@@ -18,4 +19,4 @@ const GifModal = (props) => {
   );
 };
 
-export default Modal;
+export default GifModal;
